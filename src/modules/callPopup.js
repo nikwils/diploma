@@ -2,19 +2,11 @@
 
 const callPopup = () => {
 
-    const callbackBtn1 = document.getElementById('popup'),
-        popup = document.getElementById('callback'),
+    const popup = document.getElementById('callback'),
         popupOverlay = document.querySelector('.modal-overlay'),
         inputsCallback = document.querySelectorAll('#callback input');
 
         console.log(inputsCallback);
-
-
-    callbackBtn1.addEventListener('click', () => {
-        popup.style.display = 'block';
-        popupOverlay.style.display = 'block';
-
-    });
 
     popup.addEventListener('click', (event) => {
 
@@ -33,13 +25,19 @@ const callPopup = () => {
             popup.style.display = 'none';
             popupOverlay.style.display = 'none';
         }
+        console.log(target.matches('.col-sm-6'));
+        if(target.matches('#popup') || target.closest('.col-sm-6') || target.matches('.invert')){
+            popup.style.display = 'block';
+            popupOverlay.style.display = 'block';
+        }
+        if(target.matches('.up')) {
+
+        }
         
     });
     
 
 
 };
-
-
 
 export default callPopup;

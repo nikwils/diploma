@@ -3,27 +3,26 @@
 const slider = () => {
 
     const itemRelative = document.querySelectorAll('.item');
-        // slideInterval = setInterval(nextSlide,3000);
 
-    let currentItem = 0;
-
-    console.log(itemRelative);
-    console.dir(itemRelative);
-
-    // function nextSlide() {
+    const autoSlider = function() {
         
-    //     itemRelative.forEach((el, i, arr) => {
-    //         if(i===0) {
-    //             arr.push(el);
-    //             arr.shift();
-    //         }
-    //     })
-    
-    // }
+        let i = 0;
+        setInterval(() => {
+            
+            itemRelative[i].parentNode.appendChild(itemRelative[i]); 
+            i ++;
+            if( i === itemRelative.length) {
+                i = 0;
+            }
+            
+        }, 3000);
+    };
+    autoSlider();
+
 
     
 };
 
-slider();
 
-//export default slider;
+
+export default slider;
