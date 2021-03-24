@@ -22,7 +22,8 @@ const slider = () => {
 
     
 };
+slider();
 
 
 
-export default slider;
+// export default slider;
