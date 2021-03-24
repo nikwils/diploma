@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_callPopup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/callPopup */ \"./src/modules/callPopup.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_accordeonSection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/accordeonSection */ \"./src/modules/accordeonSection.js\");\n/* harmony import */ var _modules_scrollUp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/scrollUp */ \"./src/modules/scrollUp.js\");\n\n\n\n\n\n //Заказать звонок\n\n(0,_modules_callPopup__WEBPACK_IMPORTED_MODULE_0__.default)(); //Слайдер\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_1__.default)(); //accordeon\n\n(0,_modules_accordeonSection__WEBPACK_IMPORTED_MODULE_2__.default)(); //скролл\n\n(0,_modules_scrollUp__WEBPACK_IMPORTED_MODULE_3__.default)();\n\n//# sourceURL=webpack://thesis_project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_callPopup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/callPopup */ \"./src/modules/callPopup.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_slider__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_accordeonSection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/accordeonSection */ \"./src/modules/accordeonSection.js\");\n/* harmony import */ var _modules_scrollUp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/scrollUp */ \"./src/modules/scrollUp.js\");\n\n\n\n\n\n //Заказать звонок\n\n(0,_modules_callPopup__WEBPACK_IMPORTED_MODULE_0__.default)(); //Слайдер\n\n_modules_slider__WEBPACK_IMPORTED_MODULE_1___default()(); //accordeon\n\n(0,_modules_accordeonSection__WEBPACK_IMPORTED_MODULE_2__.default)(); //скролл\n\n(0,_modules_scrollUp__WEBPACK_IMPORTED_MODULE_3__.default)();\n\n//# sourceURL=webpack://thesis_project/./src/index.js?");
 
 /***/ }),
 
@@ -54,9 +54,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!*******************************!*\
   !*** ./src/modules/slider.js ***!
   \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n\nvar slider = function slider() {\n  var itemRelative = document.querySelectorAll('.item');\n\n  var autoSlider = function autoSlider() {\n    var i = 0;\n    setInterval(function () {\n      itemRelative[i].parentNode.appendChild(itemRelative[i]);\n      i++;\n\n      if (i === itemRelative.length) {\n        i = 0;\n      }\n    }, 3000);\n  };\n\n  autoSlider();\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n//# sourceURL=webpack://thesis_project/./src/modules/slider.js?");
+eval("\n\nvar slider = function slider() {\n  var itemRelative = document.querySelectorAll('.item');\n\n  var autoSlider = function autoSlider() {\n    var i = 0;\n    setInterval(function () {\n      itemRelative[i].parentNode.appendChild(itemRelative[i]);\n      i++;\n\n      if (i === itemRelative.length) {\n        i = 0;\n      }\n    }, 3000);\n  };\n\n  autoSlider();\n};\n\nslider(); // export default slider;\n\n//# sourceURL=webpack://thesis_project/./src/modules/slider.js?");
 
 /***/ })
 
@@ -87,6 +87,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
