@@ -75,6 +75,5 @@ const sliderServices = () => {
 
 };
 
-sliderServices();
 
-// export default sliderServices;
+export default sliderServices;
