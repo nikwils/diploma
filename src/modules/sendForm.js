@@ -6,9 +6,11 @@ const sendForm = () => {
         successMessage = 'Спасибо! Мы скоро с вами свяжемся';
 
     const statusMessage = document.createElement('div');
-    const form = document.getElementsByName('form-callback');
+    const form = document.getElementById('form-callback'),
+        popup = document.getElementById('callback'),
+        popupOverlay = document.querySelector('.modal-overlay');
 
-    popup.addEventListener('submit', (event) => {
+        form.addEventListener('submit', (event) => {
         
         statusMessage.style.cssText = 'font-size: 2rem;';
 
@@ -37,8 +39,9 @@ const sendForm = () => {
                 if(target.matches('#callback')){
                     statusMessage.style.cssText = 'color: black;';
                     setTimeout(() => {
-                        form.style.display = 'none';
-                    },6000)
+                        popup.style.display = 'none';
+                        popupOverlay.style.display = 'none';
+                    },6000);
                 } 
                 
                 setTimeout(()=> {
@@ -69,6 +72,6 @@ const sendForm = () => {
     };
 };
 
-sendForm();
+// sendForm();
 
-    // export default sendForm;
+    export default sendForm;

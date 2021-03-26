@@ -23,5 +23,4 @@ const dataValidation = () => {
 
 };
 
-dataValidation();
-// export default dataValidation;
+export default dataValidation;

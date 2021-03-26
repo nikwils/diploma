@@ -3,10 +3,7 @@
 const callPopup = () => {
 
     const popup = document.getElementById('callback'),
-        popupOverlay = document.querySelector('.modal-overlay'),
-        inputsCallback = document.querySelectorAll('#callback input');
-
-        console.log(inputsCallback);
+        popupOverlay = document.querySelector('.modal-overlay');
 
     popup.addEventListener('click', (event) => {
 
@@ -21,7 +18,7 @@ const callPopup = () => {
     document.addEventListener('click', (event) => {
         let target = event.target;
 
-        if(!target.matches('#popup') && !target.closest('#callback')) {
+        if(target.matches('#modal-close') || target.closest('.modal-overlay')) {
             popup.style.display = 'none';
             popupOverlay.style.display = 'none';
         }
@@ -32,24 +29,10 @@ const callPopup = () => {
         
     });
     
-    // popup.addEventListener('click', (event)=>{
-    //     let target = event.target;
-        
-    //     if(target.classList.contains('popup-close')){
-    //         count = 0;
-    //         popup.style.display = 'none';
-    //     } else {
-    //         target = target.closest('.popup-content');
-
-    //         if(!target) {
-    //             count = 0;
-    //             popup.style.display = 'none';
-    //         }
-    //     }
-        
-    // });
+    
 
 
 };
+
 
 export default callPopup;

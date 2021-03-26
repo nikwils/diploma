@@ -8,8 +8,6 @@ const sliderServices = () => {
         arrowLeft = document.querySelector('.arrow-left'),
         arrowRight = document.querySelector('.arrow-right');
 
-        console.log(servicesCarousel);
-
     let currentSlide = 0;
 
     const prevSlide = (el, i) => {

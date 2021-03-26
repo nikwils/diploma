@@ -6,6 +6,8 @@ import slider from './modules/slider';
 import accordeonSection from './modules/accordeonSection';
 import scrollUp from './modules/scrollUp';
 import sliderServices from './modules/sliderServices';
+import sendForm from './modules/sendForm';
+import dataValidation from './modules/dataValidation';
 
 //Заказать звонок
 callPopup();
@@ -16,4 +18,8 @@ accordeonSection();
 //скролл
 scrollUp();
 //
-sliderServices()
+sliderServices();
+//
+sendForm();
+//
+dataValidation();
