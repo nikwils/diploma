@@ -25,17 +25,29 @@ const callPopup = () => {
             popup.style.display = 'none';
             popupOverlay.style.display = 'none';
         }
-        console.log(target.matches('.col-sm-6'));
         if(target.matches('#popup') || target.closest('.col-sm-6') || target.matches('.invert')){
             popup.style.display = 'block';
             popupOverlay.style.display = 'block';
         }
-        if(target.matches('.up')) {
-
-        }
         
     });
     
+    // popup.addEventListener('click', (event)=>{
+    //     let target = event.target;
+        
+    //     if(target.classList.contains('popup-close')){
+    //         count = 0;
+    //         popup.style.display = 'none';
+    //     } else {
+    //         target = target.closest('.popup-content');
+
+    //         if(!target) {
+    //             count = 0;
+    //             popup.style.display = 'none';
+    //         }
+    //     }
+        
+    // });
 
 
 };

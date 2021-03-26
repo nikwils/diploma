@@ -924,7 +924,7 @@ video#video_background {
 	}
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 9999px) {
 	.top-slider .item {
 		height: 520px;
 	}
