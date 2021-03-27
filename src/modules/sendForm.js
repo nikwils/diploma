@@ -36,13 +36,11 @@ const sendForm = () => {
 
                 statusMessage.textContent = successMessage;
 
-                if(target.matches('#callback')){
-                    statusMessage.style.cssText = 'color: black;';
-                    setTimeout(() => {
-                        popup.style.display = 'none';
-                        popupOverlay.style.display = 'none';
-                    },6000);
-                } 
+                setTimeout(() => {
+                    popup.style.display = 'none';
+                    popupOverlay.style.display = 'none';
+                },6000);
+                
                 
                 setTimeout(()=> {
                     statusMessage.hidden = true;
@@ -59,7 +57,16 @@ const sendForm = () => {
     const postData = (body) => {
 
         const inputs = document.querySelectorAll('input');
-        inputs.forEach(input => input.value = '');
+        inputs.forEach((input, i) => {
+            if(i==2){
+                input.value = 'Отправить';
+            };
+            input.value = '';
+            if(i==2){
+                input.value = 'Отправить';
+            };
+            
+        });
 
         return fetch('./server.php', {
             method: 'POST',
@@ -72,6 +79,4 @@ const sendForm = () => {
     };
 };
 
-// sendForm();
-
-    export default sendForm;
+export default sendForm;
