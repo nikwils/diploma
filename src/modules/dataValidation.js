@@ -16,7 +16,7 @@ const dataValidation = () => {
             });
         }
         if(target.matches('#tel')){
-            target.value = target.value.replace(/[\D() ]/g, '');
+            target.value = target.value.replace(/[^0-9\s]/g, '');
         }
         
     });
