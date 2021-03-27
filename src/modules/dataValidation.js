@@ -7,7 +7,7 @@ const dataValidation = () => {
 
         popup.addEventListener('input', (event) => {
         let target = event.target;
-
+ 
         if(target.matches('#fio')){
             target.value = target.value.replace(/\w/g, '');
            
@@ -16,7 +16,7 @@ const dataValidation = () => {
             });
         }
         if(target.matches('#tel')){
-            target.value = target.value.replace(/[^0-9\s]/g, '');
+            target.value = target.value.replace(/[^0-9\+]/g, '');
         }
         
     });
